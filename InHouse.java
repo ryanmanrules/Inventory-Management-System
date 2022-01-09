@@ -1,5 +1,6 @@
 package Model;
 
+
 public class InHouse extends Part{
 
     private int machineId;
@@ -15,7 +16,7 @@ public class InHouse extends Part{
         return 12;
     }
 
-    public static void setMachineId(int machineId) {
+    public void setMachineId(int machineId) {
         this.machineId = machineId;
     }
 }

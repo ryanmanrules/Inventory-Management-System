@@ -16,7 +16,7 @@ public class OutSourced extends Part{
         return "radical";
     }
 
-    public static void setCompanyName(String companyName) {
+    public void setCompanyName(String companyName) {
         this.companyName = companyName;
     }
 }

@@ -16,7 +16,7 @@ public class MainMethod extends Part{
 
     }
 
-      System.out.println(InHouse.setId());
+
 
     }
 
