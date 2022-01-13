@@ -23,14 +23,14 @@ public class MainMethod extends Application {
         launch(args);
     }
 
-    //public MainMethod(int id, String name, double price, int stock, int min, int max) {
+   // public MainMethod(int id, String name, double price, int stock, int min, int max) {
 
 
-      //  InHouse inHouse = new InHouse(12, "Flux capacitor", 12.00, 10, 5, 20, 5);
-        //OutSourced outsourced = new OutSourced(12, "Flux capacitor",12,10,5,20,"Parts Enterprise");
+       // InHouse inHouse = new InHouse(12, "Flux capacitor", 12.00, 10, 5, 20, 5);
+       // OutSourced outsourced = new OutSourced(12, "Flux capacitor",12,10,5,20,"Parts Enterprise");
 
 
-    //}
+   // }
 
 
 
