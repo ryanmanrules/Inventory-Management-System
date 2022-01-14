@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="548.0" prefWidth="1008.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="548.0" prefWidth="1008.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.FirstScreen">
    <children>
       <Label layoutX="34.0" layoutY="6.0" prefHeight="72.0" prefWidth="312.0" text="Inventory Management System">
          <font>
@@ -21,7 +21,7 @@
       </Label>
       <HBox layoutX="261.0" layoutY="115.0" prefHeight="36.0" prefWidth="200.0">
          <children>
-            <TextField prefHeight="30.0" prefWidth="204.0" promptText="Search by Product or Name" />
+            <TextField fx:id="MainMenuSearchBarParts" prefHeight="30.0" prefWidth="204.0" promptText="Search by Product or Name" />
          </children>
       </HBox>
       <Label layoutX="89.0" layoutY="123.0" text="Parts">
@@ -31,17 +31,17 @@
       </Label>
       <HBox alignment="CENTER_RIGHT" layoutX="75.0" layoutY="418.0" prefHeight="30.0" prefWidth="386.0" spacing="15.0">
          <children>
-            <Button mnemonicParsing="false" text="Add">
+            <Button fx:id="MainMenuPartsAddButton" mnemonicParsing="false" onAction="#OnActionOpenAddParts" text="Add">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" text="Modify">
+            <Button fx:id="MainMenuPartsModifyButton" mnemonicParsing="false" onAction="#OnActionOpenModifyParts" text="Modify">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" text="Delete">
+            <Button fx:id="MainMenuPartsDeleteButton" mnemonicParsing="false" onAction="#OnActionDeletePart" text="Delete">
                <font>
                   <Font size="14.0" />
                </font>
@@ -56,22 +56,22 @@
       </HBox>
       <HBox layoutX="684.0" layoutY="115.0" prefHeight="36.0" prefWidth="200.0">
          <children>
-            <TextField prefHeight="30.0" prefWidth="204.0" promptText="Search by Product or Name" />
+            <TextField fx:id="MainMenuSearchBarProducts" prefHeight="30.0" prefWidth="204.0" promptText="Search by Product or Name" />
          </children>
       </HBox>
       <HBox alignment="CENTER_RIGHT" layoutX="498.0" layoutY="418.0" prefHeight="30.0" prefWidth="386.0" spacing="15.0">
          <children>
-            <Button mnemonicParsing="false" text="Add">
+            <Button fx:id="MainMenuProductsAddButton" mnemonicParsing="false" onAction="#OnActionOpenAddProduct" text="Add">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" text="Modify">
+            <Button fx:id="MainMenuProductsModifyButton" mnemonicParsing="false" onAction="#OnActionOpenModifyProduct" text="Modify">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" text="Delete">
+            <Button fx:id="MainMenuProductsDeleteButton" mnemonicParsing="false" onAction="#OnActionDeleteProduct" text="Delete">
                <font>
                   <Font size="14.0" />
                </font>
@@ -89,19 +89,19 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Button layoutX="884.0" layoutY="490.0" mnemonicParsing="false" text="Exit">
+      <Button fx:id="MainMenuExitButton" layoutX="884.0" layoutY="490.0" mnemonicParsing="false" onAction="#OnActionExit" text="Exit">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
       <VBox alignment="TOP_CENTER" layoutX="498.0" layoutY="145.0" prefHeight="273.0" prefWidth="386.0">
          <children>
-            <TableView prefHeight="259.0" prefWidth="386.0">
+            <TableView fx:id="MainMenuTableProducts" prefHeight="259.0" prefWidth="386.0">
                <columns>
-                  <TableColumn editable="false" prefWidth="75.0" text="Part ID" />
-                  <TableColumn editable="false" prefWidth="75.0" text="Part Name" />
-                  <TableColumn editable="false" prefWidth="109.0" text="Inventory Level" />
-                  <TableColumn editable="false" prefWidth="126.0" text="Price/Cost Per Unit" />
+                  <TableColumn fx:id="MainMenuProductsPartID" editable="false" prefWidth="75.0" text="Part ID" />
+                  <TableColumn fx:id="MainMenuProductsPartName" editable="false" prefWidth="75.0" text="Part Name" />
+                  <TableColumn fx:id="MainMenuProductsInventoryLevel" editable="false" prefWidth="109.0" text="Inventory Level" />
+                  <TableColumn fx:id="MainMenuProductsPriceCost" editable="false" prefWidth="126.0" text="Price/Cost Per Unit" />
                </columns>
             </TableView>
             <ScrollBar />
@@ -112,12 +112,12 @@
       </VBox>
       <VBox alignment="TOP_CENTER" layoutX="75.0" layoutY="145.0" prefHeight="273.0" prefWidth="386.0">
          <children>
-            <TableView prefHeight="259.0" prefWidth="386.0">
+            <TableView fx:id="MainMenuTableParts" prefHeight="259.0" prefWidth="386.0">
                <columns>
-                  <TableColumn editable="false" prefWidth="75.0" text="Part ID" />
-                  <TableColumn editable="false" prefWidth="75.0" text="Part Name" />
-                  <TableColumn editable="false" prefWidth="109.0" text="Inventory Level" />
-                  <TableColumn editable="false" prefWidth="126.0" text="Price/Cost Per Unit" />
+                  <TableColumn fx:id="MainMenuPartsPartID" editable="false" prefWidth="75.0" text="Part ID" />
+                  <TableColumn fx:id="MainMenuPartsPartName" editable="false" prefWidth="75.0" text="Part Name" />
+                  <TableColumn fx:id="MainMenuPartsInventoryLevel" editable="false" prefWidth="109.0" text="Inventory Level" />
+                  <TableColumn fx:id="MainMenuPartsPriceCost" editable="false" prefWidth="126.0" text="Price/Cost Per Unit" />
                </columns>
             </TableView>
             <ScrollBar />

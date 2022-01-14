@@ -59,21 +59,21 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label text="Machine ID" GridPane.rowIndex="5">
+                  <Label text="Company Name" GridPane.rowIndex="5">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField disable="true" editable="false" text="2" GridPane.columnIndex="1">
+                  <TextField fx:id="ModifyPartOutSourcedID" disable="true" editable="false" text="2" GridPane.columnIndex="1">
                      <font>
                         <Font name="System Italic" size="14.0" />
                      </font>
                   </TextField>
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <TextField fx:id="ModifyPartOutSourcedName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="ModifyPartOutSourcedInv" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="ModifyPartOutSourcedPriceCost" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="ModifyPartOutSourcedMax" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField fx:id="ModifyPartOutSourcedCompanyName" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                </children>
             </GridPane>
          </children>
@@ -96,7 +96,7 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="ModifyPartOutSourcedMin" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                </children>
             </GridPane>
          </children>
@@ -106,14 +106,14 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Button layoutX="379.0" layoutY="347.0" mnemonicParsing="false" text="Save" />
-      <Button layoutX="464.0" layoutY="347.0" mnemonicParsing="false" text="Cancel" />
-      <RadioButton layoutX="216.0" layoutY="40.0" mnemonicParsing="false" selected="true" text="In-House">
+      <Button fx:id="ModifyPartOutSourcedSaveButton" layoutX="379.0" layoutY="347.0" mnemonicParsing="false" text="Save" />
+      <Button fx:id="ModifyPartOutSourcedCancelButton" layoutX="464.0" layoutY="347.0" mnemonicParsing="false" text="Cancel" />
+      <RadioButton fx:id="ModifyPartOutSourcedMenuInhouseRadio" layoutX="216.0" layoutY="40.0" mnemonicParsing="false" selected="true" text="In-House">
          <font>
             <Font size="14.0" />
          </font>
       </RadioButton>
-      <RadioButton layoutX="379.0" layoutY="42.0" mnemonicParsing="false" text="Outsourced">
+      <RadioButton fx:id="ModifyPartOutSourcedMenuOutSourcedRadio" layoutX="379.0" layoutY="42.0" mnemonicParsing="false" text="Outsourced">
          <font>
             <Font size="14.0" />
          </font>

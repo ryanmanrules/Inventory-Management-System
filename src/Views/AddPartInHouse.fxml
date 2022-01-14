@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -11,7 +12,6 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane prefHeight="468.0" prefWidth="758.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AddPartInHouse">
    <children>
@@ -65,16 +65,16 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField disable="true" editable="false" text="Auto-Gen Disabled" GridPane.columnIndex="1">
+                  <TextField fx:id="AddPartInHouseID" disable="true" editable="false" text="Auto-Gen Disabled" GridPane.columnIndex="1">
                      <font>
                         <Font name="System Italic" size="14.0" />
                      </font>
                   </TextField>
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <TextField fx:id="AddPartInHouseName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="AddPartInhouseInv" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="AddPartInhousePriceCost" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="AddPartInhouseMax" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField fx:id="AddPartInhouseMachineID" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                </children>
             </GridPane>
          </children>
@@ -97,7 +97,7 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="AddPartInhouseMin" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                </children>
             </GridPane>
          </children>
@@ -107,14 +107,17 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Button layoutX="379.0" layoutY="347.0" mnemonicParsing="false" text="Save" />
-      <Button layoutX="464.0" layoutY="347.0" mnemonicParsing="false" text="Cancel" />
-      <RadioButton layoutX="216.0" layoutY="40.0" mnemonicParsing="false" selected="true" text="In-House">
+      <Button fx:id="AddPartInhouseSave" layoutX="379.0" layoutY="347.0" mnemonicParsing="false" text="Save" />
+      <Button fx:id="AddPartInhouseCancel" layoutX="464.0" layoutY="347.0" mnemonicParsing="false" onAction="#OnActionPartBackToMenu" text="Cancel" />
+      <RadioButton fx:id="AddPartInhousemenuInhouseRadio" layoutX="216.0" layoutY="40.0" mnemonicParsing="false" text="In-House">
          <font>
             <Font size="14.0" />
          </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="AddPartInHouseOutSourced" />
+         </toggleGroup>
       </RadioButton>
-      <RadioButton layoutX="379.0" layoutY="42.0" mnemonicParsing="false" text="Outsourced">
+      <RadioButton fx:id="AddPartInhouseMenuOutSourcedRadio" layoutX="379.0" layoutY="42.0" mnemonicParsing="false" text="Outsourced" toggleGroup="$AddPartInHouseOutSourced">
          <font>
             <Font size="14.0" />
          </font>

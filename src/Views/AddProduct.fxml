@@ -45,8 +45,8 @@
                         <Insets left="5.0" />
                      </padding>
                   </Label>
-                  <TextField disable="true" promptText="Auto-Gen Disabled" GridPane.columnIndex="1" />
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="AddProductID" disable="true" promptText="Auto-Gen Disabled" GridPane.columnIndex="1" />
+                  <TextField fx:id="AddProductName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                </children>
             </GridPane>
          </children>
@@ -91,9 +91,9 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField GridPane.columnIndex="1" />
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="AddProductInv" GridPane.columnIndex="1" />
+                  <TextField fx:id="AddProductPrice" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="AddProductMax" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                </children>
             </GridPane>
          </children>
@@ -122,19 +122,19 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField GridPane.columnIndex="1" />
+                  <TextField fx:id="AddProductmin" GridPane.columnIndex="1" />
                </children>
             </GridPane>
          </children>
       </VBox>
       <VBox layoutX="685.0" layoutY="81.0" prefHeight="236.0" prefWidth="418.0">
          <children>
-            <TableView prefHeight="200.0" prefWidth="200.0">
+            <TableView fx:id="AddProductTableFind" prefHeight="200.0" prefWidth="200.0">
               <columns>
-                <TableColumn editable="false" prefWidth="97.0" text="Part ID" />
-                <TableColumn editable="false" prefWidth="109.0" text="Part Name" />
-                  <TableColumn editable="false" prefWidth="100.0" text="Inventory Level" />
-                  <TableColumn editable="false" prefWidth="111.0" text="Price/Cost Per Unit" />
+                <TableColumn fx:id="AddProductPartIDFind" editable="false" prefWidth="97.0" text="Part ID" />
+                <TableColumn fx:id="AddProductPartNameFind" editable="false" prefWidth="109.0" text="Part Name" />
+                  <TableColumn fx:id="AddProductInventoryLevelFind" editable="false" prefWidth="100.0" text="Inventory Level" />
+                  <TableColumn fx:id="AddProductPriceCostFind" editable="false" prefWidth="111.0" text="Price/Cost Per Unit" />
               </columns>
             </TableView>
             <ScrollBar />
@@ -142,7 +142,7 @@
       </VBox>
       <VBox alignment="CENTER" layoutX="1024.0" layoutY="298.0" prefHeight="25.0" prefWidth="79.0">
          <children>
-            <Button alignment="CENTER" mnemonicParsing="false" text="Add">
+            <Button fx:id="AddProductAddButton" alignment="CENTER" mnemonicParsing="false" text="Add">
                <font>
                   <Font size="14.0" />
                </font>
@@ -154,12 +154,12 @@
       </VBox>
       <VBox layoutX="685.0" layoutY="350.0" prefHeight="215.0" prefWidth="418.0">
          <children>
-            <TableView prefHeight="200.0" prefWidth="200.0">
+            <TableView fx:id="AddProductTableAdd" prefHeight="200.0" prefWidth="200.0">
                <columns>
-                  <TableColumn editable="false" prefWidth="97.0" text="Part ID" />
-                  <TableColumn editable="false" prefWidth="109.0" text="Part Name" />
-                  <TableColumn editable="false" prefWidth="100.0" text="Inventory Level" />
-                  <TableColumn editable="false" prefWidth="111.0" text="Price/Cost Per Unit" />
+                  <TableColumn fx:id="AddProductPartIDAdd" editable="false" prefWidth="97.0" text="Part ID" />
+                  <TableColumn fx:id="AddProductPartNameAdd" editable="false" prefWidth="109.0" text="Part Name" />
+                  <TableColumn fx:id="AddProductInventoryLevelAdd" editable="false" prefWidth="100.0" text="Inventory Level" />
+                  <TableColumn fx:id="AddProductPriceCostAdd" editable="false" prefWidth="111.0" text="Price/Cost Per Unit" />
                </columns>
             </TableView>
             <ScrollBar />
@@ -167,7 +167,7 @@
       </VBox>
       <VBox layoutX="895.0" layoutY="565.0" prefHeight="27.0" prefWidth="208.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="191.0" text="Remove Associated Part">
+            <Button fx:id="AddProductRemovePartButton" mnemonicParsing="false" prefHeight="27.0" prefWidth="191.0" text="Remove Associated Part">
                <font>
                   <Font size="14.0" />
                </font>
@@ -179,14 +179,14 @@
       </VBox>
       <HBox layoutX="895.0" layoutY="605.0" prefHeight="40.0" prefWidth="191.0" spacing="80.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="41.0" text="Save" />
-            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="52.0" text="Cancel" />
+            <Button fx:id="AddProductSaveButton" mnemonicParsing="false" prefHeight="27.0" prefWidth="41.0" text="Save" />
+            <Button fx:id="AddProductCancelButton" mnemonicParsing="false" onAction="#OnActionBackToMenu" prefHeight="30.0" prefWidth="52.0" text="Cancel" />
          </children>
          <padding>
             <Insets bottom="5.0" top="10.0" />
          </padding>
       </HBox>
-      <TextField layoutX="921.0" layoutY="36.0" prefHeight="30.0" prefWidth="182.0" promptText="Search by Part ID or Name">
+      <TextField fx:id="AddProductSearchBar" layoutX="921.0" layoutY="36.0" prefHeight="30.0" prefWidth="182.0" promptText="Search by Part ID or Name">
          <font>
             <Font size="14.0" />
          </font>

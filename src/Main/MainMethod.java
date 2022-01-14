@@ -13,7 +13,7 @@ public class MainMethod extends Application {
     public void start(Stage Stage)throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("../Views/FirstScreen.fxml"));
         Stage.setTitle("First Screen");
-        Stage.setScene(new Scene(root, 800, 600));
+        Stage.setScene(new Scene(root, 1008, 548));
         Stage.show();
 
 
