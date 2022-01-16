@@ -65,7 +65,7 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="AddPartInHouseID" disable="true" editable="false" text="Auto-Gen Disabled" GridPane.columnIndex="1">
+                  <TextField fx:id="AddPartInHouseID" GridPane.columnIndex="1">
                      <font>
                         <Font name="System Italic" size="14.0" />
                      </font>
@@ -107,9 +107,9 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Button fx:id="AddPartInhouseSave" layoutX="379.0" layoutY="347.0" mnemonicParsing="false" text="Save" />
+      <Button fx:id="AddPartInhouseSave" layoutX="379.0" layoutY="347.0" mnemonicParsing="false" onAction="#OnActionSaveButton" text="Save" />
       <Button fx:id="AddPartInhouseCancel" layoutX="464.0" layoutY="347.0" mnemonicParsing="false" onAction="#OnActionPartBackToMenu" text="Cancel" />
-      <RadioButton fx:id="AddPartInhousemenuInhouseRadio" layoutX="216.0" layoutY="40.0" mnemonicParsing="false" text="In-House">
+      <RadioButton fx:id="AddPartInhousemenuInhouseRadio" layoutX="216.0" layoutY="40.0" mnemonicParsing="false" onAction="#OnActionChangeLabelToMachineID" text="In-House">
          <font>
             <Font size="14.0" />
          </font>

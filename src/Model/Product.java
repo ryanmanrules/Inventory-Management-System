@@ -1,7 +1,7 @@
 package Model;
 
 public class Product extends Part {
-    private int id;
+    private static int id;
     private String name;
     private double price;
     private int stock;
